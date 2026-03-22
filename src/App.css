@@ -1,0 +1,73 @@
+.nav-link-custom {
+  text-decoration: none;   /* remove underline */
+  color: #212529;          /* default dark text */
+  font-weight: 500;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* hover color */
+.nav-link-custom:hover {
+  color: #0d6efd; /* Bootstrap blue */
+}
+
+/* smooth underline animation */
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.product-modal-backdrop {
+  position: fixed;
+  z-index: 3;
+  margin: auto;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+}
+.product-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+}
+
+.cart-item {
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-summary {
+  max-width: 400px;
+  margin-left: auto;
+}

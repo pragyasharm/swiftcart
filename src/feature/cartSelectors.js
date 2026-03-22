@@ -1,0 +1,2 @@
+export const totalQuantitySelector = (state) => state.cart.products.reduce((total, curr)=> total+ curr.quantity, 0)
+export const totalPriceSelector = (state)=> state.cart.products.reduce((total, curr)=> (total + (curr.quantity * curr.price)), 0)
