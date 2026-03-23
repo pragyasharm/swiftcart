@@ -1,8 +1,9 @@
 import axios from "axios";
+import { axiosinstace } from "./axiosInstance";
 
 export const getProducts = async ({ pageParam = 0 }) => {
-  const res = await axios.get(
-    `https://dummyjson.com/products?limit=10&skip=${pageParam}`
+  const res = await axiosinstace.get(
+    `/products?limit=10&skip=${pageParam}`
   );
   return res.data;
 };
