@@ -7,6 +7,10 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "auto",
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
+      },
       manifest: {
         name: "SwiftCart",
         short_name: "SwiftCart",
@@ -15,14 +19,15 @@ export default defineConfig({
         background_color: "#ffffff",
         display: "standalone",
         start_url: "/swiftcart/",
+        scope: "/swiftcart/",
         icons: [
           {
-            src: "/icon-192.png",
+            src: "/swiftcart/logo-swiftcart-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/icon-512.png",
+            src: "/swiftcart/logo-swiftcart-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },

@@ -16,7 +16,7 @@ const ProductModal = ({product, onClose}) => {
         <p>{product.description}</p>
         <h5>${product.price}</h5>
 
-        <button className="btn btn-primary w-100 mt-3" onClick={()=> dispatch(addToCart(product))}>
+        <button className="btn btn-primary w-100 mt-3" onClick={()=> dispatch(addToCart(product))}  aria-label="Cart">
           Add to Cart
         </button>
         
